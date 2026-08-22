@@ -246,13 +246,25 @@ console.log("Fusing design and code to create digital experiences.");
                 <span class="text-[9px] uppercase tracking-[0.25em] text-zinc-500 font-medium hidden sm:inline-block border-l border-zinc-800/80 pl-3">Erick Matheus</span>
             </div>
 
-            <!-- Status Tag -->
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/15 border border-emerald-500/40 backdrop-blur-md shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all duration-300">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-                </span>
-                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Disponível para projetos</span>
+            <!-- Language Selector + Status Tag -->
+            <div class="flex items-center gap-4">
+                <!-- Language Selector -->
+                <div class="flex items-center gap-2 text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-zinc-500">
+                    <button onclick="setLang('pt')" id="lang-pt" class="cursor-hover hover:text-white transition-colors duration-200 text-white">PT</button>
+                    <span class="text-zinc-800">/</span>
+                    <button onclick="setLang('en')" id="lang-en" class="cursor-hover hover:text-white transition-colors duration-200">EN</button>
+                    <span class="text-zinc-800">/</span>
+                    <button onclick="setLang('es')" id="lang-es" class="cursor-hover hover:text-white transition-colors duration-200">ES</button>
+                </div>
+
+                <!-- Status Tag -->
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/15 border border-emerald-500/40 backdrop-blur-md shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all duration-300">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                    </span>
+                    <span data-i18n="status" class="text-[9px] md:text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Disponível para projetos</span>
+                </div>
             </div>
         </header>
 
@@ -267,13 +279,13 @@ console.log("Fusing design and code to create digital experiences.");
                         <div class="absolute inset-0 bg-gradient-to-tr from-[#1B3A6B]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div class="flex flex-col h-full justify-between gap-8 relative z-10">
                             <div class="flex flex-col gap-2">
-                                <span class="text-[9px] uppercase tracking-widest text-[#2A5298] font-bold">Tradição & Prestígio Jurídico</span>
+                                <span data-i18n="fjo-tag" class="text-[9px] uppercase tracking-widest text-[#2A5298] font-bold">Tradição & Prestígio Jurídico</span>
                                 <h3 class="font-syne text-xl md:text-2xl font-extrabold text-white group-hover:text-[#2A5298] transition-colors duration-300">Fernando José de Oliveira</h3>
-                                <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
+                                <p data-i18n="fjo-desc" class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
                                     Modernização digital e presença institutional de alto nível para uma tradicional sociedade de advogados com mais de 45 anos de atuação ininterrupta.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-[#2A5298] transition-colors duration-300 font-medium">
+                            <div data-i18n="fjo-btn" class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-[#2A5298] transition-colors duration-300 font-medium">
                                 Acessar Website <span class="text-xs font-sans group-hover:translate-x-1 transition-transform duration-300">→</span>
                             </div>
                         </div>
@@ -284,13 +296,13 @@ console.log("Fusing design and code to create digital experiences.");
                         <div class="absolute inset-0 bg-gradient-to-tr from-zinc-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div class="flex flex-col h-full justify-between gap-8 relative z-10">
                             <div class="flex flex-col gap-2">
-                                <span class="text-[9px] uppercase tracking-widest text-zinc-400 font-bold">Advocacia de Elite</span>
+                                <span data-i18n="ma-tag" class="text-[9px] uppercase tracking-widest text-zinc-400 font-bold">Advocacia de Elite</span>
                                 <h3 class="font-syne text-xl md:text-2xl font-extrabold text-white group-hover:text-zinc-200 transition-colors duration-300">Maria Andrade</h3>
-                                <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
+                                <p data-i18n="ma-desc" class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
                                     Identidade e posicionamento digital refinados e focados em segurança jurídica, desenhados para atrair e fidelizar clientes corporativos e de alta renda.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-zinc-200 transition-colors duration-300 font-medium">
+                            <div data-i18n="ma-btn" class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-zinc-200 transition-colors duration-300 font-medium">
                                 Acessar Website <span class="text-xs font-sans group-hover:translate-x-1 transition-transform duration-300">→</span>
                             </div>
                         </div>
@@ -301,13 +313,13 @@ console.log("Fusing design and code to create digital experiences.");
                         <div class="absolute inset-0 bg-gradient-to-tr from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div class="flex flex-col h-full justify-between gap-8 relative z-10">
                             <div class="flex flex-col gap-2">
-                                <span class="text-[9px] uppercase tracking-widest text-yellow-500/80 font-bold">Direito do Trabalho & Compliance</span>
+                                <span data-i18n="cc-tag" class="text-[9px] uppercase tracking-widest text-yellow-500/80 font-bold">Direito do Trabalho & Compliance</span>
                                 <h3 class="font-syne text-xl md:text-2xl font-extrabold text-white group-hover:text-yellow-400 transition-colors duration-300">Cíntia Camargo</h3>
-                                <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
+                                <p data-i18n="cc-desc" class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
                                     Interface sofisticada com foco na prevenção de litígios, compliance trabalhista e assessoria corporativa estratégica para abrangência nacional.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300 font-medium">
+                            <div data-i18n="cc-btn" class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300 font-medium">
                                 Acessar Website <span class="text-xs font-sans group-hover:translate-x-1 transition-transform duration-300">→</span>
                             </div>
                         </div>
@@ -318,13 +330,13 @@ console.log("Fusing design and code to create digital experiences.");
                         <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div class="flex flex-col h-full justify-between gap-8 relative z-10">
                             <div class="flex flex-col gap-2">
-                                <span class="text-[9px] uppercase tracking-widest text-blue-500/80 font-bold">Presença Digital Premium</span>
+                                <span data-i18n="tl-tag" class="text-[9px] uppercase tracking-widest text-blue-500/80 font-bold">Presença Digital Premium</span>
                                 <h3 class="font-syne text-xl md:text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">Trium Lab</h3>
-                                <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
+                                <p data-i18n="tl-desc" class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed mt-2">
                                     Desenvolvimento de ecossistemas digitais unificados, combinando SEO técnico de ponta, tráfego e automações inteligentes focadas em alto padrão.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-blue-400 transition-colors duration-300 font-medium">
+                            <div data-i18n="tl-btn" class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-zinc-500 group-hover:text-blue-400 transition-colors duration-300 font-medium">
                                 Acessar Website <span class="text-xs font-sans group-hover:translate-x-1 transition-transform duration-300">→</span>
                             </div>
                         </div>
@@ -335,7 +347,7 @@ console.log("Fusing design and code to create digital experiences.");
             <!-- Back to Hub Button -->
             <div class="w-full flex justify-center mt-12 mb-6">
                 <a href="https://www.erickmatheus.com.br" class="cursor-hover group relative inline-flex items-center gap-3 rounded-full border border-zinc-900 bg-zinc-950/40 px-8 py-3.5 hover:border-zinc-800 hover:bg-zinc-900/20 transition-all duration-300 backdrop-blur-sm">
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors duration-300 font-semibold flex items-center gap-2">
+                    <span data-i18n="back-btn" class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors duration-300 font-semibold flex items-center gap-2">
                         <span class="text-xs font-sans group-hover:-translate-x-1 transition-transform duration-300">←</span> Voltar para o Hub
                     </span>
                 </a>
@@ -345,7 +357,7 @@ console.log("Fusing design and code to create digital experiences.");
 
         <!-- Footer -->
         <footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 z-10 border-t border-zinc-900/60 pt-6">
-            <div class="text-[10px] uppercase tracking-widest text-zinc-600 order-2 md:order-1 text-center md:text-left">
+            <div data-i18n="copyright" class="text-[10px] uppercase tracking-widest text-zinc-600 order-2 md:order-1 text-center md:text-left">
                 © 2026 Erick Matheus. Todos os direitos reservados.
             </div>
 
@@ -888,6 +900,99 @@ console.log("Fusing design and code to create digital experiences.");
                 window.location.reload();
             }
         });
+
+        // --- 10. Multi-language Translation ---
+        const translations = {
+            pt: {
+                status: "Disponível para projetos",
+                "fjo-tag": "Tradição & Prestígio Jurídico",
+                "fjo-desc": "Modernização digital e presença institutional de alto nível para uma tradicional sociedade de advogados com mais de 45 anos de atuação ininterrupta.",
+                "fjo-btn": "Acessar Website →",
+                "ma-tag": "Advocacia de Elite",
+                "ma-desc": "Identidade e posicionamento digital refinados e focados em segurança jurídica, desenhados para atrair e fidelizar clientes corporativos e de alta renda.",
+                "ma-btn": "Acessar Website →",
+                "cc-tag": "Direito do Trabalho & Compliance",
+                "cc-desc": "Interface sofisticada com foco na prevenção de litígios, compliance trabalhista e assessoria corporativa estratégica para abrangência nacional.",
+                "cc-btn": "Acessar Website →",
+                "tl-tag": "Presença Digital Premium",
+                "tl-desc": "Desenvolvimento de ecossistemas digitais unificados, combinando SEO técnico de ponta, tráfego e automações inteligentes focadas em alto padrão.",
+                "tl-btn": "Acessar Website →",
+                "back-btn": "Voltar para o Hub",
+                copyright: "© 2026 Erick Matheus. Todos os direitos reservados."
+            },
+            en: {
+                status: "Available for projects",
+                "fjo-tag": "Tradition & Legal Prestige",
+                "fjo-desc": "Digital modernization and high-level institutional presence for a traditional law firm with over 45 years of continuous practice.",
+                "fjo-btn": "Visit Website →",
+                "ma-tag": "Elite Law Practice",
+                "ma-desc": "Refined digital identity and positioning focused on legal security, designed to attract and retain corporate and high-net-worth clients.",
+                "ma-btn": "Visit Website →",
+                "cc-tag": "Labor Law & Compliance",
+                "cc-desc": "Sophisticated interface focused on dispute prevention, labor compliance, and strategic corporate advice with nationwide coverage.",
+                "cc-btn": "Visit Website →",
+                "tl-tag": "Premium Digital Presence",
+                "tl-desc": "Development of unified digital ecosystems, combining cutting-edge technical SEO, traffic, and intelligent automations focused on high standards.",
+                "tl-btn": "Visit Website →",
+                "back-btn": "Back to Hub",
+                copyright: "© 2026 Erick Matheus. All rights reserved."
+            },
+            es: {
+                status: "Disponible para proyectos",
+                "fjo-tag": "Tradición & Prestigio Jurídico",
+                "fjo-desc": "Modernización digital y presencia institucional de alto nivel para una tradicional sociedad de abogados con más de 45 años de trayectoria ininterrumpida.",
+                "fjo-btn": "Visitar Sitio Web →",
+                "ma-tag": "Abogacía de Élite",
+                "ma-desc": "Identidad y posicionamiento digital refinados y enfocados en seguridad jurídica, diseñados para atrair y fidelizar clientes corporativos y de altos ingresos.",
+                "ma-btn": "Visitar Sitio Web →",
+                "cc-tag": "Derecho Laboral & Compliance",
+                "cc-desc": "Interfaz sofisticada enfocada en la prevención de litigios, compliance laboral y asesoramiento corporativo estratégico de alcance nacional.",
+                "cc-btn": "Visitar Sitio Web →",
+                "tl-tag": "Presencia Digital Premium",
+                "tl-desc": "Desarrollo de ecosistemas digitales unificados, combinando SEO técnico de vanguardia, tráfico y automatizaciones inteligentes enfocado en altos estándares.",
+                "tl-btn": "Visitar Sitio Web →",
+                "back-btn": "Volver al Hub",
+                copyright: "© 2026 Erick Matheus. Todos los derechos reservados."
+            }
+        };
+
+        function setLang(lang) {
+            // Update selected button style
+            ['pt', 'en', 'es'].forEach(l => {
+                const btn = document.getElementById(`lang-${l}`);
+                if (btn) {
+                    if (l === lang) {
+                        btn.classList.add('text-white');
+                        btn.classList.remove('text-zinc-500');
+                    } else {
+                        btn.classList.remove('text-white');
+                        btn.classList.add('text-zinc-500');
+                    }
+                }
+            });
+
+            // Translate elements
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (key.endsWith('-btn') && !key.startsWith('back')) {
+                        el.innerHTML = `${translations[lang][key].replace(' →', '')} <span class="text-xs font-sans group-hover:translate-x-1 transition-transform duration-300">→</span>`;
+                    } else if (key === 'back-btn') {
+                        el.innerHTML = `<span class="text-xs font-sans group-hover:-translate-x-1 transition-transform duration-300">←</span> ${translations[lang][key]}`;
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                }
+            });
+
+            // Save choice
+            localStorage.setItem('pref-lang', lang);
+        }
+
+        // Initialize language (defaulting to 'pt' if none is stored)
+        const savedLang = localStorage.getItem('pref-lang') || 'pt';
+        setLang(savedLang);
     </script>
 </body>
 </html>
