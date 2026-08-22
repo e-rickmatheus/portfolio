@@ -627,33 +627,35 @@ console.log("Fusing design and code to create digital experiences.");
         // --- 4. Clipboard Functionality ---
         const emailAddress = 'erickmrdm@gmail.com'; // Your official email
 
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(emailAddress).then(() => {
-                // Animate elements to success feedback state
-                gsap.to(btnText, { opacity: 0, y: -5, duration: 0.15, onComplete: () => {
-                    btnText.innerText = 'Copiado!';
-                    btnText.style.color = '#10b981'; // Emerald/green feedback
-                    gsap.to(btnText, { opacity: 1, y: 0, duration: 0.15 });
-                }});
-
-                gsap.to(iconCopy, { opacity: 0, scale: 0.5, duration: 0.15 });
-                gsap.to(iconCheck, { opacity: 1, scale: 1, duration: 0.2, delay: 0.05 });
-
-                // Revert button back to default after 2.5 seconds
-                setTimeout(() => {
-                    gsap.to(btnText, { opacity: 0, y: 5, duration: 0.15, onComplete: () => {
-                        btnText.innerText = 'Copiar E-mail';
-                        btnText.style.color = '';
+        if (copyBtn) {
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(emailAddress).then(() => {
+                    // Animate elements to success feedback state
+                    gsap.to(btnText, { opacity: 0, y: -5, duration: 0.15, onComplete: () => {
+                        btnText.innerText = 'Copiado!';
+                        btnText.style.color = '#10b981'; // Emerald/green feedback
                         gsap.to(btnText, { opacity: 1, y: 0, duration: 0.15 });
                     }});
 
-                    gsap.to(iconCheck, { opacity: 0, scale: 0.5, duration: 0.15 });
-                    gsap.to(iconCopy, { opacity: 1, scale: 1, duration: 0.2, delay: 0.05 });
-                }, 2500);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
+                    gsap.to(iconCopy, { opacity: 0, scale: 0.5, duration: 0.15 });
+                    gsap.to(iconCheck, { opacity: 1, scale: 1, duration: 0.2, delay: 0.05 });
+
+                    // Revert button back to default after 2.5 seconds
+                    setTimeout(() => {
+                        gsap.to(btnText, { opacity: 0, y: 5, duration: 0.15, onComplete: () => {
+                            btnText.innerText = 'Copiar E-mail';
+                            btnText.style.color = '';
+                            gsap.to(btnText, { opacity: 1, y: 0, duration: 0.15 });
+                        }});
+
+                        gsap.to(iconCheck, { opacity: 0, scale: 0.5, duration: 0.15 });
+                        gsap.to(iconCopy, { opacity: 1, scale: 1, duration: 0.2, delay: 0.05 });
+                    }, 2500);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
             });
-        });
+        }
 
         // --- 5. Dynamic Word Cycling (GSAP) ---
         // Combination of Design Concepts and Funny Developer/Coding Snippets
@@ -674,6 +676,7 @@ console.log("Fusing design and code to create digital experiences.");
         let wordIndex = 0;
 
         function cycleWord() {
+            if (!wordEl) return;
             const nextIndex = (wordIndex + 1) % words.length;
             
             // Slide current word up and fade out
@@ -706,14 +709,17 @@ console.log("Fusing design and code to create digital experiences.");
                 }
             });
         }
-        // Shift words every 3 seconds
-        setInterval(cycleWord, 3000);
+        // Shift words every 3 seconds if element exists
+        if (wordEl) {
+            setInterval(cycleWord, 3000);
+        }
 
         // --- 6. Tagline Glitch/Matrix Typing Effect ---
         const originalTaglineText = "EM CONSTRUÇÃO";
         const binaryChars = "01";
 
         function glitchTagline() {
+            if (!tagline) return;
             let iterations = 0;
             
             // Switch to Matrix green color and glow
@@ -751,10 +757,12 @@ console.log("Fusing design and code to create digital experiences.");
         }
 
         // Run tagline decryption glitch after load, then every 7 seconds
-        setTimeout(() => {
-            glitchTagline();
-            setInterval(glitchTagline, 7000);
-        }, 3500);
+        if (tagline) {
+            setTimeout(() => {
+                glitchTagline();
+                setInterval(glitchTagline, 7000);
+            }, 3500);
+        }
 
         // --- 7. Easter Egg Trigger & Hacker Animation ---
         let logoClicks = 0;
